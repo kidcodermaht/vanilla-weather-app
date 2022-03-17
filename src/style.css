@@ -41,8 +41,8 @@ li {
 }
 
 .weather-icon {
-  height: 65px;
-  width: 65px;
+  height: 100px;
+  width: 100px;
   margin-right: 5px;
 }
 
@@ -67,4 +67,24 @@ li {
 
 .clearfix .active:hover {
   text-decoration: none;
+}
+
+.weather-forcast {
+  margin: 20px;
+  text-align: center;
+}
+
+.weather-forcast-date {
+  font-size: 18px;
+  color: black;
+  opacity: 0.5;
+}
+
+.weather-forcast-temperature-max {
+  color: orangered;
+}
+
+.weather-forcast-temperature-min {
+  color: blue;
+  opacity: 0.5;
 }
