@@ -1,4 +1,3 @@
-
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -23,6 +22,27 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForcast() {
+  let forcastElement = document.querySelector("#forcast");
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let forcastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forcastHTML =
+      forcastHTML +
+      `
+  <div class="col-2">
+    <div class="weather-forcast-date">${day}</div>
+    <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" width="40"/>
+    <div class="weather-forcast-temperature">
+      <span class="weather-forcast-temperature-max"> 18 ° </span>
+       <span class="weather-forcast-temperature-min"> 12 ° </span>
+      </div>
+  </div>
+  `;
+  });
+  forcastHTML = forcastHTML + `</div>`;
+  forcastElement.innerHTML = forcastHTML;
+}
 function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -100,3 +120,5 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurretLocation);
 
 searchCity("Tehran");
+
+displayForcast();
