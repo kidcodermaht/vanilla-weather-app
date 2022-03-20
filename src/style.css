@@ -35,11 +35,11 @@ li {
 }
 
 .weather-app {
-  border: 1px solid #d9d9d9;
+  border: 1.5px solid #5c636a;
   border-radius: 30px;
   padding: 20px;
+  background-color: #fffdf1;
 }
-
 .weather-icon {
   height: 100px;
   width: 100px;
@@ -76,15 +76,16 @@ li {
 
 .weather-forcast-date {
   font-size: 18px;
-  color: black;
-  opacity: 0.5;
+  color: rgb(112, 117, 122);
+  font-weight: 200px;
+  opacity: 0.9;
 }
 
 .weather-forcast-temperature-max {
-  color: orangered;
+  color: #7c0a02;
 }
 
 .weather-forcast-temperature-min {
-  color: blue;
-  opacity: 0.5;
+  color: #111d5e;
+  opacity: 0.9;
 }
